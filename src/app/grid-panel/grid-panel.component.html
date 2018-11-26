@@ -1,0 +1,17 @@
+<div>
+  <div>Grid Panel</div>
+  <ul>
+    <li *ngFor="let student of students">
+      <div>
+        <span> {{student.name}}</span>
+        <span>
+          <a [routerLink]="['/student', student.name,'edit']">Edit</a>
+        </span>
+        <span>
+          <a [routerLink]="['/student', student.name]">View</a>
+        </span>
+      </div>
+      <hr>
+    </li>
+  </ul>
+</div>
