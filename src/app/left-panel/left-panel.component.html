@@ -4,15 +4,15 @@
     <li *ngFor="let student of students">
       <div>
         <ul>
-          <li>Name: {{student.name}}</li>
-          <li>DOB: {{student.dob | date}}</li>
-          <li>Score: {{student.score}}</li>
-          <li>Stream: {{student.stream}}</li>
+          <li>Name: {{ student.name }}</li>
+          <li>DOB: {{ student.dob | date }}</li>
+          <li>Score: {{ student.score }}</li>
+          <li>Stream: {{ streams[student.stream].name }}</li>
         </ul>
       </div>
-      <br>
-      <hr>
-      <br>
+      <br />
+      <hr />
+      <br />
     </li>
   </ul>
   <button (click)="onSubmit()">Add Student</button>

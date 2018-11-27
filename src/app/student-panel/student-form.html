@@ -1,0 +1,35 @@
+<div>
+  <div>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" formControlName="name" />
+        </div>
+        <div>
+          <label for="dob">DOB</label>
+          <input type="date" id="dob" formControlName="dob | date " />
+        </div>
+        <div>
+          <label for="score">Score</label>
+          <input type="number" id="score" formControlName="score" />
+        </div>
+        <div>
+          <label for="stream">Stream</label>
+          <select id="stream" formControlName="stream">
+            <option *ngFor="let stream of streams" [value]="stream.id">{{
+              stream.name
+            }}</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div>
+          <button type="submit" [disabled]="!studentForm.valid">
+            {{ editMode ? "Update" : "Add" }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

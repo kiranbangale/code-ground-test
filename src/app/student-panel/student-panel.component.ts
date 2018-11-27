@@ -1,22 +1,12 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { StudentService } from '../student.service';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-student-panel',
-  templateUrl: './student-panel.component.html',
-  styleUrls: ['./student-panel.component.css']
+  selector: "app-student-panel",
+  templateUrl: "./student-panel.component.html",
+  styleUrls: ["./student-panel.component.css"]
 })
 export class StudentPanelComponent implements OnInit {
-  @ViewChild('f')
-  studentForm: NgForm;
+  constructor() {}
 
-  streams;
-  editMode = false;
-
-  constructor(private studentService: StudentService) {}
-
-  ngOnInit() {
-    this.streams = this.studentService.getStreams();
-  }
+  ngOnInit() {}
 }

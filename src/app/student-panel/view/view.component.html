@@ -1,3 +1,15 @@
-<p>
-  view works!
-</p>
+<div>
+  Students Details
+  <div>
+    <ul>
+      <li>Name: {{ student.name }}</li>
+      <li>DOB: {{ student.dob | date }}</li>
+      <li>Score: {{ student.score }}</li>
+      <li>Stream: {{ streams[student.stream].name }}</li>
+    </ul>
+  </div>
+  <br />
+  <hr />
+  <br />
+  <a [routerLink]="['/dashboard']">Return to dashboard</a>
+</div>
